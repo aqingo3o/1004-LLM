@@ -20,8 +20,7 @@ Suggested repo structure:
 └── README.md
 ```
 Each main folder may contain author-specific subfolders.  
-If you are not sure where something should go,  
-**starting in your own subfolder is always the safest option.**
+If you are not sure where something should go, **starting in your own subfolder ;)**
 
 ## Modifying Existing Content
 - Small changes: open branch and PR
