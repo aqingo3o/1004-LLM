@@ -15,6 +15,9 @@
 除了炒炒同學也請炒點有用的東西!  
 `CONTRIBUTING.md` 中描述了一些格式或結構的規範。在推東西上來之前請先閱讀它，避免爆破這個 repo
 
+### whiteBoard.md
+可以在這邊留言
+
 ### tutorial/
 ### interface/
 
