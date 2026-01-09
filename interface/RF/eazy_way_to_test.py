@@ -5,7 +5,7 @@ import torch
 
 # 自動選擇裝置：有 GPU 就用 cuda，沒 GPU 就用 cpu
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print(f"這台電腦將使用: {device}")
+print(f"use: {device}")
 
 tensor_1 = torch.tensor([1., 2., 3.])
 tensor_2 = torch.tensor([4., 5., 6.])
