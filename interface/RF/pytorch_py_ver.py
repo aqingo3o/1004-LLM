@@ -1,3 +1,5 @@
+# plz run this command: 
+# pip3 install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu124
 import torch
 
 class MyLLM(torch.nn.Module):
