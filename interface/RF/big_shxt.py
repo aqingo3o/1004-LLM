@@ -2,6 +2,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.data import Dataset, DataLoader
+import time
+start_time = time.time()
 
 # ==========================================
 # 1. Environment Check & Setup
@@ -78,3 +80,6 @@ for epoch in range(3):
 
     print(f"   Epoch {epoch+1}/3 Complete | Loss: {loss.item():.4f}")
 print("\n Test finished! If no errors occurred and Loss is displayed, your GPU setup is perfect.")
+
+end = time.time()
+print(f'{end - start_time} seconds')
