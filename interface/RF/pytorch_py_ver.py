@@ -1,6 +1,8 @@
 # plz run this command: 
 # pip3 install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu124
 import torch
+import torch.nn.functional as F
+from torch.autograd import grad
 
 class MyLLM(torch.nn.Module):
     def __init__(self):
@@ -9,9 +11,7 @@ class MyLLM(torch.nn.Module):
 
     def forward(self, x):
         return self.layer1(x)                   # 定義資料流向
-    
-import torch.nn.functional as F
-from torch.autograd import grad
+
 
 y = torch.tensor([1.0])
 x1 = torch.tensor([1.1])

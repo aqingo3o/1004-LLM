@@ -77,5 +77,4 @@ for epoch in range(3):
         optimizer.step()
 
     print(f"   Epoch {epoch+1}/3 Complete | Loss: {loss.item():.4f}")
-
 print("\n Test finished! If no errors occurred and Loss is displayed, your GPU setup is perfect.")
