@@ -1,74 +1,81 @@
 import torch
+import torch.nn as nn
 import torch.nn.functional as F
+from torch.utils.data import Dataset, DataLoader
 
-x = torch.tensor([1, 2, 3])
-x = x.to("cuda")                # Move tensor to GPU
+# ==========================================
+# 1. Environment Check & Setup
+# ==========================================
+if torch.cuda.is_available():
+    device = torch.device("cuda")
+    print(f"Success! GPU detected: {torch.cuda.get_device_name(0)}")
+else:
+    device = torch.device("cpu")
+    print("Warning: No GPU detected. Falling back to CPU.")
 
-# create a 2D tensor
-tensor_2d = torch.tensor([[1, 2, 3],
-                         [4, 5, 6]])
-print(tensor_2d)
+# ==========================================
+# 2. Define Classes (Dataset & Model)
+# ==========================================
+class ToyDataset(Dataset):
+    def __init__(self, X, y):
+        self.features = X
+        self.labels = y
+    def __getitem__(self, index):
+        return self.features[index], self.labels[index]
+    def __len__(self):
+        return self.labels.shape[0]
 
-# check the shape
-print(tensor_2d.shape)
-
-# reshape the tensor to 3x2
-# method 1
-print(tensor_2d.reshape(3, 2))
-
-# **method 2** : use `view`
-print(tensor_2d.view(3, 2))
-
-# transpose the tensor
-print(tensor_2d.T)
-
-# muptliply two tensors
-tensor_a = torch.tensor([[1, 2, 3],
-                         [4, 5, 6]])
-tensor_b = tensor_a.T
-
-# meethod 1
-print(tensor_a.matmul(tensor_b))
-
-# method 2: use `@` operator
-print(tensor_a @ tensor_b)
-
-class MyLLM(torch.nn.Module):
-    def __init__(self):
+class NeuralNetwork(nn.Module):
+    def __init__(self, num_inputs, num_outputs): 
         super().__init__()
-        self.layer1 = torch.nn.Linear(10, 5)    # 定義零件
-
+        self.layers = nn.Sequential(
+            nn.Linear(num_inputs, 30),
+            nn.ReLU(),
+            nn.Linear(30, 20),
+            nn.ReLU(),
+            nn.Linear(20, num_outputs),
+        )
     def forward(self, x):
-        return self.layer1(x)                   # 定義資料流向
-    
+        return self.layers(x)
 
-y = torch.tensor([1.0])         # answer
-x1 = torch.tensor([1.1])        # 輸入特徵
-w1 = torch.tensor([2.2])        # weights
-b = torch.tensor([0.0])         # bias unit
+# ==========================================
+# 3. Data Preparation & Model Setup
+# ==========================================
+# Prepare dummy data
+X_train = torch.tensor([[-1.2, 3.1], [-0.9, 2.9], [-0.5, 2.6], [2.3, -1.1], [2.7, -1.5]])
+y_train = torch.tensor([0, 0, 0, 1, 1])
 
-z = x1 * w1 + b         # input
-a = torch.sigmoid(z)    # activation function and output
+# Create DataLoader
+train_loader = DataLoader(
+    dataset=ToyDataset(X_train, y_train),
+    batch_size=2,
+    shuffle=True
+)
 
-loss = F.binary_cross_entropy(a, y) # 計算損失
-print(loss)
+# Initialize Model and move to GPU
+torch.manual_seed(123)
+model = NeuralNetwork(num_inputs=2, num_outputs=2).to(device)
+optimizer = torch.optim.SGD(model.parameters(), lr=0.5)
 
+# ==========================================
+# 4. Execute Training Loop (GPU Test)
+# ==========================================
+print("\n Starting GPU training loop test...")
 
-from torch.autograd import grad
+for epoch in range(3):
+    model.train()
+    for batch_idx, (features, labels) in enumerate(train_loader):
+        # Key step: Move data to the selected device (GPU)
+        features, labels = features.to(device), labels.to(device)
+        
+        # Standard training steps
+        logits = model(features)
+        loss = F.cross_entropy(logits, labels)
 
-y = torch.tensor([1.0])
-x1 = torch.tensor([1.1])
-w1 = torch.tensor([2.2], requires_grad=True)
-b = torch.tensor([0.0], requires_grad=True)
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
 
-z = x1 * w1 + b 
-a = torch.sigmoid(z)
+    print(f"   Epoch {epoch+1}/3 Complete | Loss: {loss.item():.4f}")
 
-loss = F.binary_cross_entropy(a, y)
-
-grad_L_w1 = grad(loss, w1, retain_graph=True) 
-grad_L_b = grad(loss, b, retain_graph=True)
-
-print(grad_L_w1)
-print(grad_L_b)
-
+print("\n Test finished! If no errors occurred and Loss is displayed, your GPU setup is perfect.")
