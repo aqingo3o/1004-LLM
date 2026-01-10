@@ -7,7 +7,7 @@ GPU server IP 請見 1004 的白板
 
 ## Repo Structure
 資料夾的結構是，大分類的資料夾(tutorial, interface...）之下，有以**人類**命名的 subfolder  
-詳見 [CONTRIBUTING.md](1004-LLM/CONTRIBUTING.md)  
+詳見 [CONTRIBUTING.md](CONTRIBUTING.md)  
 要重組自己的檔案結構建議建立 banch，要改**別人**的檔案結構建議先推 issue  
 以下是地圖
 
