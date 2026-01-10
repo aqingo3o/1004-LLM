@@ -1,5 +1,6 @@
 # 1004-LLM
-歡迎大家成為 **huber ;)
+歡迎大家成為 **huber ;)  
+Please don't be shy to share your works, something you think is shit may be helpful to others.
 
 ## ‼️ Bulletin Board
 GPU server IP 請見 1004 的白板
