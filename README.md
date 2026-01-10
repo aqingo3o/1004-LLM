@@ -2,7 +2,7 @@
 歡迎大家成為 **huber ;)
 
 ## ‼️ Bulletin Board
-20260109(Fri.) 13:00 將迎來新的電腦主機! 在物理館五樓的機房
+GPU server IP 請見 1004 的白板
 
 ## Repo Structure
 資料夾的結構是，大分類的資料夾(tutorial, interface...）之下，有以**人類**命名的 subfolder  
