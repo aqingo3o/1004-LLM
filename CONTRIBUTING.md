@@ -5,9 +5,17 @@ These guidelines is to help everyone collaborate smoothly while keeping authorsh
 ## Where to Put Your Work
 Suggested repo structure:
 ```
-.      
-├── interface/
+.
+├── Tips/          # No subfolder asked in this file
+│   ├── start-with-blackhole.md
+│   └── github_and_VScode.md
+├── exp/
 │   ├── RF/        # Name of subfolder can be modi on ur own
+│   ├── z0/
+│   ├── (someone else)
+│   └── aqing/                      
+├── interface/
+│   ├── RF/
 │   ├── z0/
 │   ├── (someone else)
 │   └── aqing/                      
@@ -16,7 +24,7 @@ Suggested repo structure:
 │   ├── z0/
 │   ├── (someone else)
 │   └── aqing/
-├── start-with-blackhole.md   
+├── whiteBoard.md 
 ├── CONTRIBUTING.md      
 └── README.md
 ```
