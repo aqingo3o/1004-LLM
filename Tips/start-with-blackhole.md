@@ -1,5 +1,5 @@
 # Start with the NEW server - blackhole
-一些普通實用小指令
+一些普通實用小指令 :)
 
 ## ssh
 只能使用命令介面 (terminal) 的遠端連線方式  
