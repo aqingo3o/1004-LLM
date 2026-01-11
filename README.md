@@ -26,9 +26,10 @@ Ypu can and should give them a try.
 ### whiteBoard.md
 可以在這邊留言ㄡ
 
-### exp/
-實驗性質的東西都可以放在這裡  
-請依照 [CONTRIBUTING.md](CONTRIBUTING.md) 新增您的個人 sub-folder
+### exp/ 
+This should be the most frequently used folder.  
+Feel free to put anything experimental here, it is essentially 一鍋雜燴.  
+Please add your personal sub-folder according to [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ### tutorial/
 放一些你覺得是**面對人類**的教程，我們感謝您的付出  
@@ -36,9 +37,9 @@ Ypu can and should give them a try.
 
 ### interface/
 如果有寫聊天介面的話可以放在這邊  
-輕再買 javascript 書的時候不要
+請在買 javascript 書的時候不要買成一週學會爪哇語 (
 
 ## 旗魚
 其實我不知道什麼才算好的檔案結構，有超好的建議可以直接建立新的檔案夾並更新 `README.md`  
-有普通的建議可以建立分支或推 issue  
+有普通的建議可以建立分支或 issue  
 謝謝大家  
