@@ -7,15 +7,16 @@ Suggested repo structure:
 ```
 .      
 ├── interface/
-│   ├── rf/        # Name of subfolder can be modi on ur own
+│   ├── RF/        # Name of subfolder can be modi on ur own
 │   ├── z0/
 │   ├── (someone else)
 │   └── aqing/                      
 ├── tutorial/
-│   ├── rf/        
+│   ├── RF/        
 │   ├── z0/
 │   ├── (someone else)
-│   └── aqing/      
+│   └── aqing/
+├── start-with-blackhole.md   
 ├── CONTRIBUTING.md      
 └── README.md
 ```
