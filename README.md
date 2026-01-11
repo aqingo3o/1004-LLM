@@ -24,6 +24,8 @@ GPU server IP 請見 1004 的白板
 非常感謝任何在這邊的付出，根本是大愛  
 - github_and_VScode.md:  
 (RedFish) 
+`VS Code x GitHub 生存指南`  
+If you want to connect VS Code with GitHub, it is very nice to read this file :)
 - start-with-blackhole.md:  
 (aqing) Simple commands on how to remotely connect to the server(named **blackhole**). You can and should give them a try.
 
