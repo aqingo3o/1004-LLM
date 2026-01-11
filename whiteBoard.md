@@ -9,4 +9,5 @@
 今天是0110，很可愛的日期，我要在白板留言pypy  by RF
 
 ### 20260111
-開始嗑VS Code和GitHub的cp by RF
+開始嗑VS Code和GitHub的cp by RF   
+今天大大建設了這個庫 好開心 貢獻教程的人一生順遂...(aqing)  
