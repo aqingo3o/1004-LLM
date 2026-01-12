@@ -44,4 +44,4 @@ For example:
 GitHub automatically flattens paths when a directory **only contains a single** sub-directory and **no other files**.  
 To avoid that, we should always ensure a parent directory is displayed as an independent path, which means there shouldn't be only one folder in any parent folder (e.g. `tutorial/`, `interface/`)  
 Adding an extra file to that directory can help :)  
-The "eatra file" can be `thisFolder.md` or `.gitkeep`
+The "extra file" can be `thisFolder.md` or `.gitkeep`
