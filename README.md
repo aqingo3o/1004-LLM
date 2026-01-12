@@ -22,11 +22,11 @@ GPU server IP 請見 1004 的白板
 ### Tips/
 含有一些有用的技術。  
 非常感謝任何在這邊的付出，根本是大愛  
-- github_and_VScode.md:  
+- [github_and_VScode.md](Tips/github_and_VScode.md):  
 (RedFish) 
 `VS Code x GitHub 生存指南`  
 If you want to connect VS Code with GitHub, it is very nice to read this file :)
-- start-with-blackhole.md:  
+- [start-with-blackhole.md](Tips/start-with-blackhole.md):  
 (aqing) Simple commands on how to remotely connect to the server(named **blackhole**). You can and should give them a try.
 
 ### exp/ 
@@ -42,7 +42,7 @@ Please add your personal sub-folder according to [CONTRIBUTING.md](CONTRIBUTING.
 請在買 javascript 書的時候不要買成一週學會爪哇語 (  
 
 ### whiteBoard.md
-可以在這邊留言ㄡ
+可以在[這邊](whiteBoard.md)留言ㄡ
 
 ## 旗魚
 其實我不知道什麼才算好的檔案結構，有超好的建議可以直接建立新的檔案夾並更新 `README.md`  
