@@ -1,4 +1,4 @@
-# Local LLM
+# Run Ollama
 他媽的這件事情應該並沒有這麼容易，但總之先動起來再說？
 
 ## Steps
