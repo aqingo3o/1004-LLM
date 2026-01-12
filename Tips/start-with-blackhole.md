@@ -14,7 +14,7 @@ This command should be type in:
 - Windows PowerShell (Wins) with 管理員權限  
 
 Remember to replace **"ooo"** to your own user name!  
-Full IP address can be find on white boaard in 1004(實體).
+Full IP address can be find on white board in 1004(實體).
 
 Confirm everything that follows.
 ```
