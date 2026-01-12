@@ -1,5 +1,5 @@
 # Start with the NEW server - blackhole
-一些普通實用小指令
+一些普通實用小指令 :)
 
 ## ssh
 只能使用命令介面 (terminal) 的遠端連線方式  
@@ -7,13 +7,13 @@
 
 Use **ssh** to start a remote connection. 
 ```
-ssh aqing@140.xxx.xx.xx
+ssh ooo@140.xxx.xx.xx
 ```
 This command should be type in:
 - terminal (Linux/Mac)
 - Windows PowerShell (Wins) with 管理員權限  
 
-Remember to replace "aqing" to your own user name!  
+Remember to replace **"ooo"** to your own user name!  
 Full IP address can be find on white boaard in 1004(實體).
 
 Confirm everything that follows.
