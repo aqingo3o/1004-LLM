@@ -1,1 +1,88 @@
+import gradio as gr
+import torch
+from transformers import AutoTokenizer, AutoModelForCausalLM
 
+
+model_id = "mistralai/Mistral-7B-Instruct-v0.2"
+tokenizer = AutoTokenizer.from_pretrained(model_id)
+model = AutoModelForCausalLM.from_pretrained(
+    model_id,
+    device_map="auto",
+    load_in_4bit=True,
+    torch_dtype=torch.float16
+)
+
+def chat_function(message, history):
+
+    prompt = f"<s>[INST] {message} [/INST]"
+    
+    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+    
+    with torch.no_grad():
+        outputs = model.generate(
+            **inputs,
+            max_new_tokens=500,
+            do_sample=True,
+            temperature=0.7,
+            top_p=0.9
+        )
+    
+
+    response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+    answer = response.split("[INST]")[-1].split("[/INST]")[-1].strip()
+    return answer
+
+
+demo = gr.ChatInterface(
+    fn=chat_function, 
+    title="我的本地 Mistral AI",
+    description="這是一個運行在本地 GPU 的大型語言模型介面",
+    textbox=gr.Textbox(placeholder="請輸入你的問題...", container=False, scale=7),
+)
+
+if __name__ == "__main__":
+    demo.launch(share=False)
+import torch
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+
+model_id = "mistralai/Mistral-7B-Instruct-v0.2"
+tokenizer = AutoTokenizer.from_pretrained(model_id)
+model = AutoModelForCausalLM.from_pretrained(
+    model_id,
+    device_map="auto",
+    load_in_4bit=True,
+    torch_dtype=torch.float16
+)
+
+def chat_function(message, history):
+
+    prompt = f"<s>[INST] {message} [/INST]"
+    
+    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+    
+    with torch.no_grad():
+        outputs = model.generate(
+            **inputs,
+            max_new_tokens=500,
+            do_sample=True,
+            temperature=0.7,
+            top_p=0.9
+        )
+    
+    response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+   
+    answer = response.split("[INST]")[-1].split("[/INST]")[-1].strip()
+    return answer
+
+
+demo = gr.ChatInterface(
+    fn=chat_function, 
+    title="我的本地 Mistral AI",
+    description="這是一個運行在本地 GPU 的大型語言模型介面",
+    textbox=gr.Textbox(placeholder="請輸入你的問題...", container=False, scale=7),
+)
+
+if __name__ == "__main__":
+    demo.launch(share=False) 
