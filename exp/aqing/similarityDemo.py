@@ -4,8 +4,6 @@
 
 這邊就是進行一個全部大打包進 qingsEmbedder()
 '''
-
-from pathlib import Path
 import time
 import torch
 import torch.nn.functional
@@ -14,14 +12,9 @@ from transformers import AutoTokenizer, AutoModel
 timeStart = time.time()
 
 # Text
-root = Path(__file__).resolve().parents[0]
-textPath = f'{root}/In-the-Second-Beginning.txt'
-textFile = open(textPath, 'r') # Read-only
-textFile.close()
-testString_1 = 'kiwi bird'
-testString_2 = 'feifei is a notebook.'
-testString_3 = 'fruit'
-testString_4 = 'sweet'
+testString_1 = "I like astronomy."
+testString_2 = "I enjoy watching the night sky full of stars."
+testString_3 = "I like tomatoes."
 
 # Load Model
 tokenizer = AutoTokenizer.from_pretrained("sentence-transformers/all-MiniLM-L6-v2")
@@ -39,9 +32,14 @@ def qingsEmbedder(theItem): # theStr: 要轉成embedding的東西
     return torch.sum(token_emb * atMaskP1d, dim=1) / torch.clamp(atMaskP1d.sum(dim=1), min=1e-9)
 
 # Demo
-cos_sim_1 = torch.nn.functional.cosine_similarity(qingsEmbedder(testString_1), qingsEmbedder(testString_2))
-cos_sim_2 = torch.nn.functional.cosine_similarity(qingsEmbedder(testString_3), qingsEmbedder(testString_4))
-print(cos_sim_1, cos_sim_2)
+'''
+sentence_emb_3 = qingsEmbedder(testString_3)
+sentence_emb_3 = torch.nn.functional.normalize(sentence_emb_3, p=2, dim=1) # Normalize embeddings
+'''
+cosSim_12 = torch.nn.functional.cosine_similarity(qingsEmbedder(testString_1), qingsEmbedder(testString_2))
+cosSim_13 = torch.nn.functional.cosine_similarity(qingsEmbedder(testString_1), qingsEmbedder(testString_3))
+print(f'string1 & string2: {cosSim_12[0]:.2f}')
+print(f'string1 & string3: {cosSim_13[0]:.2f}') # 成功證明嘻嘻
 
 timeEnd = time.time()
 print(f'It took {(timeEnd-timeStart):.2f} seconds to finish the work.')
