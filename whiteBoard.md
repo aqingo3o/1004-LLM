@@ -18,3 +18,7 @@
 ### 20260121
 咪聽前一定會發生一些大便事，例如vs code壞掉，例如網路爆炸；並且羊報一個巨大超午逼，還有謝謝學妹給我出國機會愛死、、<3 by RF  
 沾學妹的光獲得出國機會...我到底憑什麼啊（第n次）然後今天用假實驗室背景超好笑，老豆從假背景裡面拿書也超好笑，facetime reaction 也超好笑，笑到停不下來 (aqing)
+
+### 20260123
+download github desktop  
+this is for testing, tks
