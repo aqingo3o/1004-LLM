@@ -90,10 +90,23 @@ sim_scores = torch.matmul(queryEmb_norm, memoryBank_norm.t()) # (1, 384) * (384,
 因為這樣正規化的動作只需要統一做一次
 '''
 
-#### 以下的東西並沒有仔細的了解
-top_scores, top_indices = torch.topk(sim_scores, k=3)
-print(f"最像的 top3 資料編號是: {top_indices[0].tolist()}") # .tolist() 可以刪掉 tensor(顯示)
-print(f"相似度分數分別是: {top_scores[0].tolist()}")
+### -----------------------------------  Top K ----------------------------------- ###
+'''# torch.topk()
+不用自己寫排序演算法!
+回傳值: a tuple of (values, index)
+- value: 前k個個最高的值分別是多少
+- index:這幾個分數在原本清單中的第幾個位置
+'''
+topScores, topIndex = torch.topk(sim_scores, k=3)
+print(f"最像的 top3 資料編號是: {topIndex[0].tolist()}") # .tolist() 可以刪掉 tensor(顯示)
+print(f"相似度分數分別是: {topScores[0].tolist()}")
+
+# another output
+print('Top three most simi chunks:', end='\n\n')
+for i in range(len(topScores[0])):
+    print(f'similarity scores: {topScores[0][i]}')
+    print(f'--> {chunks[topIndex[0][i]]}')
+    print()
 
 timeEnd = time.time()
 print(f'It took {(timeEnd-timeStart):.2f} seconds to finish the work.')
