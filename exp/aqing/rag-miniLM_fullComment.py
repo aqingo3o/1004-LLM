@@ -20,16 +20,6 @@ textPath = f'{root}/In-the-Second-Beginning.txt'
 textFile = open(textPath, 'r') # Read-only
 testText = textFile.read() # textFile 是一個通往檔案的管道, 要用 .reaad() 讀了之後才會是字串
                            # else, AttributeError: '_io.TextIOWrapper' object has no attribute 'split'
-'''
-也可以是這樣
-testArti = textPath.read_text(encoding='utf-8')
-加倍優雅
-'''
-textFile.close()
-testString_1 = 'Seren is a physicist.'
-testString_2 = ' Kita is a chemist.'
-testString_3 = 'Kita'
-testString_4 = 'Seren'
 
 ### -------------------------------  Load Model ------------------------------- ###
 tokenizer = AutoTokenizer.from_pretrained("sentence-transformers/all-MiniLM-L6-v2")
