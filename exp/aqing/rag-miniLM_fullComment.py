@@ -96,4 +96,9 @@ queryEmb = qingsEmbedder(theQuery) # (1, 384)
 queryEmb_norm = torch.nn.functional.normalize(queryEmb, p=2, dim=1)
 memoryBank_norm = torch.nn.functional.normalize(memoryBank, p=2, dim=1)
 sim_scores = torch.matmul(queryEmb_norm, memoryBank_norm.t()) # (1, 384) * (384, numChunks) = (1, numChunks)
+                                                              # 這邊的 .t() for transpose    
 # torch.matmul() 是（或者簡寫成 @ 運算子）會把兩個張量相乘, 打開來講是 matrix multiplication
+#### 以下的東西並沒有仔細的了解
+top_scores, top_indices = torch.topk(sim_scores, k=3)
+print(f"最像的 top3 資料編號是: {top_indices[0].tolist()}") # .tolist() 可以刪掉 tensor(顯示)
+print(f"相似度分數分別是: {top_scores[0].tolist()}")
