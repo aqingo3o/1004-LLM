@@ -87,7 +87,7 @@ In 2d tennsor, dim = (0, 1) stamd for (rows, columns)
 '''
 
 # query
-theQuery = 'aa' # 隨便打一點東西
+theQuery = 'who is Crowley?' # 隨便打一點東西
 queryEmb = qingsEmbedder(theQuery) # (1, 384)
 
 # 這邊不用 torch.cos_sim()
@@ -102,3 +102,6 @@ sim_scores = torch.matmul(queryEmb_norm, memoryBank_norm.t()) # (1, 384) * (384,
 top_scores, top_indices = torch.topk(sim_scores, k=3)
 print(f"最像的 top3 資料編號是: {top_indices[0].tolist()}") # .tolist() 可以刪掉 tensor(顯示)
 print(f"相似度分數分別是: {top_scores[0].tolist()}")
+
+timeEnd = time.time()
+print(f'It took {(timeEnd-timeStart):.2f} seconds to finish the work.')
