@@ -128,7 +128,7 @@ def mean_pooling(model_output, attention_mask):
     return torch.sum(token_embeddings * input_mask_expanded, 1) / torch.clamp(input_mask_expanded.sum(1), min=1e-9)
 '''
 sentence_emb_1 = meanPooling(out_1, inp_1['attention_mask']) # Perform pooling, 把 N 個 token_emb 壓成一條 sentence_emb
-sentence_emb_1 = torch.nn.functional.normalize(sentence_emb_1, p=2, dim=1) # Normalize embeddings
+sentence_emb_1 = torch.nn.functional.normalize(sentence_emb_1, p=2, dim=1) # Normalize(L2) embeddings 
 sentence_emb_2 = meanPooling(out_2, inp_2['attention_mask'])
 sentence_emb_3 = meanPooling(out_3, inp_3['attention_mask'])
 
