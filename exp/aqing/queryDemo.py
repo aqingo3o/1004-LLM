@@ -1,10 +1,11 @@
 '''
-rag-miniLM_fullComment.py 的寫的不要那麼巨醜版
-應該是啾呼一樣的功能
+rag-miniLM_fullComment.py 的寫得不要那麼巨醜版
+應該是幾乎一樣的功能
 
 這邊能做的是
 分隔長文本並檢索與輸入句子**最相關**的段落
 可以列出相關段落的 index 以及相似度分數, 但仍然像一坨大便
+(雖然原本想用的文本是 ca 的同人文, 但因為這種東西好像不是說明類的所以換成別的科普性的東西了)
 '''
 
 ### ----------------------------  Import Models ---------------------------- ###
@@ -18,7 +19,8 @@ timeStart = time.time()
 
 ### ---------------------------------  Text --------------------------------- ###
 root = Path(__file__).resolve().parents[0]
-textPath = f'{root}/In-the-Second-Beginning.txt'
+#textPath = f'{root}/In-the-Second-Beginning.txt' # CA qwq
+textPath = f'{root}/what-are-active-galactic-nuclei.txt' # agn
 textFile = open(textPath, 'r').read() # open() 打開的是一個通往檔案的管道, 
                                       # 要用 .reaad() 讀了之後才會是字串
                                       # else, AttributeError: '_io.TextIOWrapper' object 
@@ -73,17 +75,20 @@ for c in chunks:
 memoryBank = torch.cat(sentenceEmbs, dim=0)
 
 ### ---------------------------------  Try Query --------------------------------- ###
-theQuery = 'who is Crowley?' # 隨便打一點東西
+#theQuery = 'what is the different between seyfert and qusar?'
+theQuery = 'is agn blackhole?'
 queryEmb = qingsEmbedder(theQuery, True)
 sim_scores = torch.matmul(queryEmb, memoryBank.t()) # 已經正規化過了所以可以直接用矩陣乘法
 '''# same as ""
 sim_scores = queryEmb @ memoryBank.t()
 '''
 
-#### 以下的東西並沒有仔細的了解
-top_scores, top_indices = torch.topk(sim_scores, k=3)
-print(f"The top3 related parts are: {top_indices[0].tolist()}") # .tolist() 可以刪掉 tensor(顯示)
-print(f"The similarities are: {top_scores[0].tolist()}")
+topScores, topIndex = torch.topk(sim_scores, k=3)
+print(f'In all {len(chunks)} chunks, these are top three most simi:') # 他的的英文亂講
+for i in range(len(topScores[0])):
+    print(f'Similarity scores: {(topScores[0][i]):.2f}')
+    print(f'--> {chunks[topIndex[0][i]]}')
+    print()
 
 timeEnd = time.time()
 print(f'It took {(timeEnd-timeStart):.2f} seconds to finish the work.')
