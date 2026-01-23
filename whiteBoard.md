@@ -21,4 +21,4 @@
 
 ### 20260123 
 做出了好東西！目前是放在[這裡](/exp/aqing/queryDemo.py)！  
-請下載 (相依的.txt)[/exp/aqing/what-are-active-galactic-nuclei.txt] 並且試試看吧！還滿酷的，程式有什麼破病也可以開 issue (星星眼) (aqing)
+請下載 [相依的.txt](/exp/aqing/what-are-active-galactic-nuclei.txt) 並且試試看吧！還滿酷的，程式有什麼破病也可以開 issue 🤩 (aqing)
