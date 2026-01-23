@@ -66,13 +66,13 @@ startt = 0
 for c in tooLong:
     while startt<len(c):
         endd = startt + 400 # 400 = maxLen
-        short_c = c[startt:endd] # 我有問題，那為什麼不一開始就這樣ㄑㄧㄝ
+        short_c = c[startt:endd] # 我有問題，那為什麼不一開始就這樣切？
         # 我覺得做好之後可以比較涼中切法的精確程度
-        # 因為切切切的過程中就是在處理句子不樣被切得太碎的問題啊
+        # 因為切的照個步驟就是在處理句子不要被切得太碎的問題啊 (語意破碎)
         chunks.append(short_c)
         startt += 50 # 一點重疊
-
 
 sentenceEmbs = []
 for c in chunks:
     sentenceEmbs.append(qingsEmbedder(c))
+
