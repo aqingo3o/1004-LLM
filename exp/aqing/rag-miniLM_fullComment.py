@@ -76,3 +76,24 @@ sentenceEmbs = []
 for c in chunks:
     sentenceEmbs.append(qingsEmbedder(c))
 
+# 進行一個記憶的過程, 但不確定所以先放這邊
+memoryBank = torch.cat(sentenceEmbs, dim=0) # (numChunks, 384)
+'''# 這行的解釋
+torch.cat 的 cat 是 Concatenate (串接/連結) 的縮寫
+想到ㄌ unix command 的 cat/tac 
+一樣的英文 但好像用出來的用途不一樣?
+總之 torch.cat() 是把呱呱中間的東西沿著 dim 指定的方向堆疊
+In 2d tennsor, dim = (0, 1) stamd for (rows, columns)
+'''
+
+# query
+theQuery = 'aa' # 隨便打一點東西
+queryEmb = qingsEmbedder(theQuery) # (1, 384)
+
+# 這邊不用 torch.cos_sim()
+# 用正規化加上矩陣乘法
+# 稍微的節省算力，因為這樣正規化的動作只需要統一做一次
+queryEmb_norm = torch.nn.functional.normalize(queryEmb, p=2, dim=1)
+memoryBank_norm = torch.nn.functional.normalize(memoryBank, p=2, dim=1)
+sim_scores = torch.matmul(queryEmb_norm, memoryBank_norm.t()) # (1, 384) * (384, numChunks) = (1, numChunks)
+# torch.matmul() 是（或者簡寫成 @ 運算子）會把兩個張量相乘, 打開來講是 matrix multiplication
