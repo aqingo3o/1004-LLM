@@ -26,9 +26,7 @@ posEmb_max = ebModel.config.max_position_embeddings
 
 ### ---------------------------------  Text --------------------------------- ###
 root = Path(__file__).resolve().parents[2]
-#textPath = f'{root}/In-the-Second-Beginning.txt' # CA qwq
-#textPath = f'{root}/{textName}.txt' # agn
-textPath = f'{root}/exp/aqing/{textName}.txt' # agn
+textPath = f'{root}/dataset/{textName}.txt' # agn
 textFile = open(textPath, 'r').read()
 
 ### --------------------------  def Embedder function ------------------------- ###

@@ -1,0 +1,99 @@
+Active galactic nuclei are active supermassive black holes that emit bright jets and winds, and shape their galaxies.
+
+Based on extensive evidence, active galactic nuclei, also commonly referred to as AGN, are now understood to be active supermassive black holes at the center of galaxies that are emitting jets and winds. 
+
+Telescopes in space and on the ground detect these emissions of gas and dust as light all along the electromagnetic spectrum — from X-rays and visible light to infrared light and radio waves. 
+
+(In contrast, inactive or quiescent black holes do not emit light and remain undetected.)
+
+The formal term active galactic nuclei applies to several additional classifications, including quasars (also known as radio galaxies) and blazars, and Seyfert galaxies.
+
+The differences between these groups begin with their distances from Earth: Seyfert galaxies are nearby, which means we can also easily see and study the galaxies that surround their active galactic nuclei.
+
+Quasars, whose name is derived from the term “quasi-stellar radio sources,” are very distant, point-like sources, which is why they received this now slightly misleading moniker.
+
+(We now know quasars’ bright active galactic nuclei are also surrounded by galaxies, but since the quasar is often much brighter than the galaxy, the galaxies’ light is difficult to differentiate from the quasars’ light.)
+
+How we detect active supermassive black holes and what NASA’s James Webb Space Telescope is helping researchers reveal.
+
+One reason we know so much about active galactic nuclei is through studies of the gas and dust that orbit supermassive black holes, 
+
+which are known as accretion disks. The particles in these ever-rotating accretion disks periodically rub together, creating heat and light.
+
+Some of this material is ejected along incredibly strong magnetic fields into jets and winds.
+
+(Material that falls into the black holes is not in this mix — only the gas and dust that is just outside their event horizons.) 
+
+Gas and other material sent flying away in the form of jets can travel well beyond the galaxies’ star-filled arms. Winds travel far shorter distances.
+
+Both jets and winds can cut off star formation, near their paths and much farther afield by heating up the galaxies’ gas.
+
+These connections between active supermassive black holes — specifically, the activities driven by their active galactic nuclei — play a critical role in our understanding the origins of modern galaxies.
+
+To date, we have a range of data about active galactic nuclei near and far, and Webb now offers high-resolution data in a range of infrared wavelengths for the first time.
+
+This is critical for two reasons: For nearby targets, infrared light allows us to peer through the gas and dust clogging the centers of galaxies, where all the action is taking place.
+
+For distant targets, the expansion of space has also led to the stretching of light for billions of years as it travels to Earth.
+
+The ultraviolet and visible light emitted by active galactic nuclei stretches over time into infrared light.
+
+Webb’s large mirror and high-resolution infrared instruments allow us to observe faint, highly redshifted objects.
+
+With these observations, Webb provides insights about galaxies in the very early universe.
+
+What Do We Know About the Cores of Nearby Galaxies? The short answer is quite a lot, but we need Webb’s measurements to precisely model how active galactic nuclei impact their host galaxies.
+
+Seyfert galaxies are closer to Earth, typically tens of millions of light-years away, which means we can observe their very bright active galactic nuclei as well as their surrounding galaxies.
+
+Seyfert galaxies aren’t as luminous and distant as quasars, but they are a convenient way to study similar phenomena in lower energy light, like infrared.
+
+The extremely bright central regions of Seyfert galaxies often obscure the much dimmer stars in the disks near the galaxies’ centers,
+
+but observations made in a range of wavelengths of light have helped researchers begin to separate what’s happening around their active galactic nuclei and what is happening elsewhere in the interacting galaxies. 
+
+Some active galactic nuclei send out immense jets of gas and other particles in opposite directions.
+
+These jets can travel up to millions of miles per hour and extend well beyond the widths of the galaxies themselves, creating giant lobes that are detectable in radio light.
+
+Webb is helping us learn precisely what’s happening near and around active galactic nuclei.
+
+Take NGC 7319 for example, the topmost galaxy in Stephan's Quintet, which harbors an active galactic nucleus.
+
+Webb revealed hot gas near the active black hole and measured the velocity of bright outflows — the most detail captured by this point.
+
+How Can We Study Extremely Distant Sources? Webb helps separate the bright, central light emitted by quasars and blazars from their surrounding galaxies’ light, helping us begin to untangle the activities of early galaxies.
+
+Quasars are significantly farther away than Seyfert galaxies.
+
+While they are found at many distances, some are so far away that we are seeing them as they were when the universe was several hundred million years old.
+
+Quasars’ two opposing bright jets have been observed pointing at a variety of angles. Blazars, which are a sub-class of quasars, have one of their jets pointing at Earth (the other, which is not directly observed, points away).
+
+Relativistic effects beam light from the narrow jet towards us, making blazars appear to be very bright and variable.
+
+They can significantly change in brightness over as little as a few months, which is why they were once thought to be a type of variable star decades ago.
+
+Quasars pour out 100 to 1,000 times as much light as an entire galaxy containing 100 billion stars (which is the estimated number of stars in our Milky Way galaxy).
+
+Since quasars are so distant, existing observations of their central light sources typically wash out the galaxies around them. (Imagine a car’s headlight obscuring nearby fireflies.) 
+
+Plus, their distances from Earth mean the light we observe has taken billions of years to travel to us, so we are actually seeing snapshots of galaxies as they formed billions of years ago (not what they look like today).
+
+To add yet one more wrinkle, evidence has shown that some quasars are also two or more colliding galaxies, like some nearby Seyfert galaxies, which may mean that they have more than one active galactic nucleus spouting bright jets of material.
+
+Researchers have combed the data and found that quasars can have an oversized influence on the galaxies in which they live.
+
+Researchers have found that jets and winds launched by active galactic nuclei heat the galaxies’ cold gas, which temporarily stops star formation. The gas eventually cools and star formation resumes.
+
+Quasars may be relatively short-lived phenomena. However, it’s important to note that the duration of these mechanics remains unsettled.
+
+Do most quasars flare up for the first 100 million years or so of a galaxy’s life? Or are quasars long-lived and rare?
+
+These questions are only two of the many reasons why researchers are so excited for Webb to observe more targets with active galactic nuclei.
+
+The observatory’s high-resolution images and data can be separated, showing only the light from the active galactic nuclei of some distant quasars from the light of their host galaxies despite their small sizes.
+
+Researchers are actively analyzing Webb’s data, with the goal of answering how black holes can grow so big so early in the universe’s development.
+
+As more targets are observed, they will also look for a relationship between the masses of distant galaxies and the masses of their black holes, like we see in the nearby universe.
