@@ -16,7 +16,7 @@ from transformers import AutoTokenizer, AutoModel
 ### ----------------------------  Set Variables ----------------------------- ###
 # 預期這邊的東西都能變成一個使用者能夠決定的東西...
 simiLMName = 'sentence-transformers/all-MiniLM-L6-v2' # for sentence similarity
-knowledgeSrc = [ #dataset/ 下的文ㄅ
+knowledgeSrc = [ # under dataset/
     'what-are-active-galactic-nuclei.txt',
     'mvp-proposal.txt',
 ]
@@ -25,6 +25,7 @@ for i in knowledgeSrc:
     print(f'- {i}')
 print()
 textName = input("Pick a file to use as reference >>> ")
+print(f"The language model for sentence similarity is {simiLMName}")
 
 ### -------------------------------  Load Model ------------------------------- ###
 tokenizer = AutoTokenizer.from_pretrained(simiLMName)
@@ -82,8 +83,6 @@ memoryBank = torch.cat(sentenceEmbs, dim=0)
 
 ### ----------------------------  cli is kind of ui... ---------------------------- ###
 print()
-#print(f'The article you are looking at is {textName}, ')
-print(f"The language model for sentence similarity is {simiLMName}", end='\n\n')
 while True:
     theQuery = input("Put your query here (or enter 'quit' to quit) >>> ")
     if theQuery=='quit':
@@ -93,7 +92,7 @@ while True:
         queryEmb = qingsEmbedder(theQuery, True)
         simiScores = queryEmb @ memoryBank.t()
         topScores, topIndex = torch.topk(simiScores, k=3)
-        print(f'In all {len(chunks)} chunks, these are top three most simi:', end='/n/n') # 他媽的英文亂講
+        print(f'In all {len(chunks)} chunks, these are top three most simi:', end='\n\n') # 他媽的英文亂講
         for i in range(len(topScores[0])):
             print(f'Similarity scores: {(topScores[0][i]):.2f}')
             print(f'--> {chunks[topIndex[0][i]]}')
