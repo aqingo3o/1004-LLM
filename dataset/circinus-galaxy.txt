@@ -1,0 +1,41 @@
+New observations by NASA’s James Webb Space Telescope, seen here with a new image from NASA’s Hubble Space Telescope, provide evidence that reverses this thinking, suggesting that most of the hot, dusty material is actually feeding the central black hole.
+
+The technique used to gather this data also has the potential to analyze the outflow and accretion components for other nearby black holes.
+
+Supermassive black holes like those in Circinus remain active by consuming surrounding matter. Infalling gas and dust accumulates into a donut-shaped ring around the black hole, known as a torus. As supermassive black holes gather matter from the torus’ inner walls, they form an accretion disk, similar to a whirlpool of water swirling around a drain. This disk grows hotter through friction, eventually becoming hot enough to emit light. 
+
+This glowing matter can become so bright that resolving details within the galaxy’s center with ground-based telescopes is difficult. It’s made even harder due to the bright, concealing starlight within Circinus. Further, since the torus is incredibly dense, the inner region of the infalling material, heated by the black hole, is obscured from our point of view. For decades, astronomers contended with these difficulties, designing and improving models of Circinus with as much data as they could gather.
+
+“In order to study the supermassive black hole, despite being unable to resolve it, they had to obtain the total intensity of the inner region of the galaxy over a large wavelength range and then feed that data into models,” said lead author Enrique Lopez-Rodriguez of the University of South Carolina. 
+
+Early models would fit the spectra from specific regions, such as the emissions from the torus, those of the accretion disk closest to the black hole, or those from the outflows, each detected at certain wavelengths of light. However, since the region could not be resolved in its entirety, these models left questions at several wavelengths. For example, some telescopes could detect an excess of infrared light, but lacked the resolution to determine where exactly it was coming from.
+
+“Since the ‘90s, it has not been possible to explain excess infrared emissions that come from hot dust at the cores of active galaxies, meaning the models only take into account either the torus or the outflows, but cannot explain that excess,” said Lopez-Rodriguez.
+
+Such models found that most of the emission (and, therefore, mass) close to the center came from outflows. To test this theory, then, astronomers needed two things: the ability to filter the starlight that previously prevented a deeper analysis, and the ability to distinguish the infrared emissions of the torus from those of the outflows. Webb, sensitive and technologically sophisticated enough to meet both challenges, was necessary to advance our understanding.
+
+To look into the center of Circinus, Webb needed the Aperture Masking Interferometer tool on its NIRISS (Near-Infrared Imager and Slitless Spectrograph) instrument. 
+
+On Earth, interferometers usually take the form of telescope arrays: mirrors or antennae that work together as if they were a single telescope. An interferometer does this by gathering and combining the light from whichever source it is pointed toward, causing the electromagnetic waves that make up light to “interfere” with each other (hence, “interfere-ometer”) and creating interference patterns. These patterns can be analyzed by astronomers to reconstruct the size, shape, and features of distant objects with much greater detail than non-interferometric techniques. 
+
+The Aperture Masking Interferometer allows Webb to become an array of smaller telescopes working together as an interferometer, creating these interference patterns by itself. It does this by utilizing a special aperture made of seven small, hexagonal holes, which, like in photography, controls the amount and direction of light that enters the telescope’s detectors.
+
+“These holes in the mask are transformed into small collectors of light that guide the light toward the detector of the camera and create an interference pattern,” said Joel Sanchez-Bermudez, co-author based at the National University of Mexico.
+
+With new data in hand, the research team was able to construct an image from the central region's interference patterns. To do so, they referenced data from previous observations to ensure their data from Webb was free of any artifacts. This resulted in the first extragalactic observation from an infrared interferometer in space.
+
+"By using an advanced imaging mode of the camera, we can effectively double its resolution over a smaller area of the sky," Sanchez-Bermudez said. "This allows us to see images twice as sharp. Instead of Webb’s 6.5-meter diameter, it’s like we are observing this region with a 13-meter space telescope." 
+
+The data showed that contrary to the models predicting that the infrared excess comes from the outflows, around 87% of the infrared emissions from hot dust in Circinus come from the areas closest to the black hole, while less than 1% of emissions come from hot dusty outflows. The remaining 12% comes from distances farther away that could not previously be told apart. 
+
+“It is the first time a high-contrast mode of Webb has been used to look at an extragalactic source,” said Julien Girard, paper co-author and senior research scientist at the Space Telescope Science Institute. “We hope our work inspires other astronomers to use the Aperture Masking Interferometer mode to study faint, but relatively small, dusty structures in the vicinity of any bright object.”
+
+While the mystery of Circinus’ excess emissions has been solved, there are billions of black holes in our universe. Those of different luminosities, the team notes, may have an influence on whether most of the emissions come from a black hole’s torus or their outflows.
+
+“The intrinsic brightness of Circinus’ accretion disk is very moderate,” Lopez-Rodriguez said. “So it makes sense that the emissions are dominated by the torus. But maybe, for brighter black holes, the emissions are dominated by the outflow.” 
+
+With this research, astronomers now have a tested technique to investigate whichever black holes they want, so long as they are bright enough for the Aperture Masking Interferometer to be useful. Studying additional targets will be essential to building a catalog of emission data to figure out if Circinus’ results were unique or characteristic of a pattern. 
+
+“We need a statistical sample of black holes, perhaps a dozen or two dozen, to understand how mass in their accretion disks and their outflows relate to their power,” Lopez-Rodriguez said.
+
+The James Webb Space Telescope is the world’s premier space science observatory. Webb is solving mysteries in our solar system, looking beyond to distant worlds around other stars, and probing the mysterious structures and origins of our universe and our place in it. Webb is an international program led by NASA with its partners, ESA (European Space Agency) and CSA (Canadian Space Agency).
