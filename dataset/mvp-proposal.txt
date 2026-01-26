@@ -22,7 +22,11 @@ In this proposal, we request ALMA time to carry out a spectral scan of the neare
 
 The resulting wideband spectrum will represent the first complete spectral sweep of ALMA Bands 1 through 10 for any astrophysical target, and in addition to identifying all strong megamaser transitions it will also provide a legacy dataset capturing a molecular inventory of the galactic environment around an AGN.
 
-Extragalactic megamasers residing in AGN accretion disks are remarkable tools that uniquely probe the sub-parsec geometry and kinematics of nuclear molecular gas(e.g., Herrnstein et al. 1999), provide gold-standard masses of supermassive black holes(e.g., Kuo et al. 2011), and allow us to determine one-step geometric distances to galaxies in the Hubble flow(e.g., Braatz et al. 2010, Kuo et al. 2015, Gao et al. 2016).
+Extragalactic megamasers residing in AGN accretion disks are remarkable tools that uniquely probe the sub-parsec geometry and kinematics of nuclear molecular gas(e.g., Herrnstein et al. 1999).
+
+Extragalactic megamasers provide gold-standard masses of supermassive black holes(e.g., Kuo et al. 2011).
+
+Extragalactic megamasers allow us to determine one-step geometric distances to galaxies in the Hubble flow (e.g., Braatz et al. 2010, Kuo et al. 2015, Gao et al. 2016).
 
 This latter capability has enabled disk megamaser systems observed at 22 GHz to contribute to observational H0 constraints in two ways:
 
@@ -48,7 +52,9 @@ Though most observational work on AGN disk megamasers to date has focused on the
 
 The first extragalactic detection of a (sub)millimeter H2O megamaser was achieved by Humphreys et al. (2005), who detected the 183 GHz transition towards the galaxy NGC 3079.
 
-Since then, 183 GHz megamaser emission has been detected towards NGC 4945 (Humphreys et al. 2016) and several other AGN (Pesce et al. 2023), and 321 GHz megamaser emission has been detected towards both the Circinus galaxy (Hagiwara et al. 2013) and NGC 4945 (Pesce et al. 2016, Hagiwara et al. 2016). 
+Since then, 183 GHz megamaser emission has been detected towards NGC 4945 (Humphreys et al. 2016) and several other AGN (Pesce et al. 2023).
+
+321 GHz megamaser emission has been detected towards both the Circinus galaxy (Hagiwara et al. 2013) and NGC 4945 (Pesce et al. 2016, Hagiwara et al. 2016). 
 
 Pesce et al. (2023) demonstrated that, at least for the 183 GHz megamasers, the high-frequency emission appears to originate from roughly the same range of radii in the accretion disk as the 22 GHz emission.
 
