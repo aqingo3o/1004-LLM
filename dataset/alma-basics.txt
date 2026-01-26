@@ -1,0 +1,80 @@
+ALMA is an interferometer, consisting of a large array of 12-m antennas (the "12-m array"), with baselines up to 16 km, and an additional compact array of 7-m and 12-m antennas to greatly enhance ALMA's ability to image extended targets, located on the Chajnantor plateau at 5000m altitude.
+
+The antennas can be placed on pads in different locations on the plateau in order to form arrays with different distributions of baseline lengths.
+
+More extended arrays will give higher spatial resolution, more compact arrays give better sensitivity for extended sources.
+
+The additional Atacama Compact Array (ACA), also known as the Morita Array, consists of twelve 7-m antennas (the "7-m array") and four 12-m ("Total Power") antennas.
+
+This array will mostly stay in a fixed configuration and is used to image large scale structures that are not well sampled by the ALMA 12-m array.
+
+An interferometer is an instrument that samples the visibility function,  which is the Fourier transform of the sky brightness distribution. This visibility function V(u,v) is measured as a function of position in the u-v plane.
+
+The coordinates u and v simply describe the vectorial separation between each pair of interferometer elements measured in wavelengths, as seen from the source.
+
+In order to obtain images, the raw visibility data need to be Fourier transformed. Fully calibrated data cubes are delivered to the user.
+
+However, the imaging (and subsequent deconvolution) is a non-unique procedure, so users may want to redo these steps to optimize the data products for their scientific objectives. The Common Astronomy Software Applications package (CASA) has been developed for this purpose.
+
+
+The frequency range available to ALMA is divided into different receiver bands. Data can only be taken in one band at a time. These bands range from band 1, starting at 35 GHz, to band 10, ending at ~950 GHz. For comparison, a frequency of 300 GHz translates to a wavelength of approximately 1mm.
+
+Please note that band 1 is expected to be available, on the 12-m Array only, in March 2024. Band 2 is not offered yet, but is under development.
+
+The field of view of an interferometer is determined by the size of the individual antennas and the observing frequency.
+
+It is independent of the array configuration. The field of view is expressed in terms of the primary beam, which describes the antenna response (sensitivity) as function of the angle away from the main axis.
+
+The primary beam can be approximated by a gaussian function, although the primary beam contain sidelobes as well.
+
+The full-width-at-half-maximum (FWHM) of the primary beam is usually taken as the diameter of the field of view of an interferometer;
+
+however, note that the sensitivity is not uniform over this field having a maximum at the center and tapering off towards the edges.
+
+The FWHM of the ALMA primary beam is 19" at 300 GHz for a 12-m antenna and a 33” for a 7-m antenna, and scales linearly with wavelength (diffraction limit of a single antenna, as opposed to that of the whole array).
+
+To achieve uniform sensitivity over a field larger than about a few arcsec, or to image larger regions than the primary beam, mosaicking is required, which is a standard observing mode for ALMA. If you plan to use mosaicking, individual pointings should be separated by 1/2 the primary beam FWHM to achieve Nyquist sampling.
+
+In the most compact 12-m array configurations (~160 m), resolutions range from 0.5" at 950 GHz to 4.3" at 110 GHz (and from March 2024, 11.9" at 40 GHz).
+
+In the most extended 12-m array configuration (~16 km), the resolutions range from 20 mas at 230 GHz to 43 mas at 110 GHz.
+
+These numbers refer to the FWHM of the synthesized beam (point spread function), which is the inverse Fourier transform of a (weighted) u-v sampling distribution.
+
+The resolution in arcsec can be approximated as: FWHM (") = 76 / max_baseline (km) / frequency (GHz).
+
+See section 7.4 of the Technical Handbook for a more extended description and better approximations.
+
+The ALMA 12-m array will cycle from its most compact configuration, with maximum baselines of ~150 m, to its most extended configuration, with maximum baselines of ~16 km (when completed), and back.
+
+The Atacama Compact Array (ACA) currently has a fixed configuration.
+
+Source structures larger than about 0.6*(lambda/bmin), where bmin is the shortest baseline in the interferometer, are not well reproduced in reconstructed images.
+
+These missing short spacing data can be measured with the ACA, using both the 7-m array and the four 12-m antennas as single dishes.
+
+To image regions larger than the primary beam, or to achieve uniform sensitivity over a field larger than about a few arcsec, mosaicking is required.
+
+ALMA can deliver data cubes with up to 7680 frequency channels (spectral resolution elements).
+
+The width of these channels can range between 3.8 kHz and 15.6 MHz, but the total bandwidth cannot exceed 8 GHz. At an observing frequency of 110 GHz, the highest spectral resolution implies a velocity resolution of 0.01 km/s, or R=30000000.
+
+At 110 GHz, a velocity resolution of 1 km/s requires channel widths of 0.37 MHz.
+
+For an interferometer, the noise level in the resulting data cubes (expressed in mJy) scales roughly as S = (k*Tsys)(A*(N*(N-1)*Np*Δν * Δτ)1/2)-1, where Tsys is the system temperature, A is the area of each antenna, N is the number of antennas, Np is the number of polarizations, Δν is the available bandwidth and Δτ is the observing time.
+
+For continuum observations, Δν=7.5 GHz, for spectral line observations, Δν is the channel width. In practice, continuum observation will result in four spectral windows each with a width of 1.875 GHz (after discarding edge channels).
+
+These four windows can be combined to form a single image with an effective frequency width of 7.5 GHz. The ALMA Sensitivity Calculator can be used to estimate noise levels or required integration times to reach a desired noise level.
+
+For extended sources that 'fill the beam', the Calculator returns the sensitivity as a brightness temperature with unit K.
+
+If you are uncomfortable with calculating sensitivities in K, just use the point source sensitivity and realize that this is the sensitivity per synthesized beam area.
+
+The sensitivity is also a strong function of the atmospheric conditions.
+
+The troposphere has an effect on the optical depth, the atmospheric emission, and on the demands for calibration.
+
+The amount of water in the atmosphere is measured as the precipitable water vapour (pwv).
+
+A value of pwv=1 mm is typical for the ALMA site. For low frequencies (ν<300 GHz), even larger values are fine for many purposes. For the higher frequencies (ν>400 GHz), pwv<0.5 mm is recommended.

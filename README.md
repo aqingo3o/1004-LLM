@@ -29,6 +29,9 @@ If you want to connect VS Code with GitHub, it is very nice to read this file :)
 - [start-with-blackhole.md](Tips/start-with-blackhole.md):  
 (aqing) Simple commands on how to remotely connect to the server(named **blackhole**). You can and should give them a try.
 
+### dataset/
+Put datasets that can be used as test or training materials.  
+
 ### exp/ 
 This should be the most frequently used folder. Feel free to put anything experimental here, it is essentially 一鍋雜燴.  
 Please add your personal sub-folder according to [CONTRIBUTING.md](CONTRIBUTING.md).
