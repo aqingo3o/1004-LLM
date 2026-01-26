@@ -6,6 +6,7 @@
 '''
 
 ### ----------------------------  Import Models ---------------------------- ###
+import numpy as np
 from pathlib import Path
 import time
 import torch
@@ -17,6 +18,7 @@ timeStart = time.time()
 ### ----------------------------  Set Variables ----------------------------- ###
 # 預期這邊的東西都能變成一個使用者能夠決定的東西...
 textName = 'what-are-active-galactic-nuclei' # 不包含副檔名
+textName = 'mvp-proposal'
 LMName = 'sentence-transformers/all-MiniLM-L6-v2' 
 
 ### -------------------------------  Load Model ------------------------------- ###
@@ -26,7 +28,7 @@ posEmb_max = ebModel.config.max_position_embeddings
 
 ### ---------------------------------  Text --------------------------------- ###
 root = Path(__file__).resolve().parents[2]
-textPath = f'{root}/dataset/{textName}.txt' # agn
+textPath = f'{root}/dataset/{textName}.txt'
 textFile = open(textPath, 'r').read()
 
 ### --------------------------  def Embedder function ------------------------- ###
@@ -56,12 +58,12 @@ def cutLong(tooLongItem, maxLen, overlap): # 與 chunks(list) 相依!!
         startIdx += overlap
     return chunks
 
-chunkLen_max = posEmb_max*0.75
+chunkLen_max = int(np.floor(posEmb_max*0.75)) # 向下取整
 for c in textFile.split('\n\n'):
     clean_c = c.strip() # remove space
     if len(clean_c) >= chunkLen_max:
         cutLong(clean_c, chunkLen_max, 50)
-    elif len(clean_c) > 20:
+    elif len(clean_c) > 30:
         chunks.append(clean_c)
 
 ### -----------------------  Chunks -> Sentence Embeddings ---------------------- ###
@@ -76,7 +78,7 @@ memoryBank = torch.cat(sentenceEmbs, dim=0)
 #theQuery = 'what is the different between seyfert and qusar?'
 
 print(f'The article you are looking at is {textName}.txt, ')
-print(f'and the using language mmodel is {LMName}.', end='\n\n')
+print(f'and the using language model is {LMName}.', end='\n\n')
 while True:
     print('Enter your query here')
     theQuery = input("(or 'quit' to exit) >>> ")
