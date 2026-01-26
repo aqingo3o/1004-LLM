@@ -1,34 +1,39 @@
 '''
-基於 /exp/aqing/queryDemo.py 製作的一款痾腳本
+基於 ../../exp/aqing/queryDemo.py 製作的一款腳本
 如果順利的話將會把這個東西接在介面上使用
+
 因此額外的新增了一些接口，並移除了更多的註解...  
 人終究會變成自己討厭的樣子
 '''
-
+print('Loading...', end='\n\n')
 ### ----------------------------  Import Models ---------------------------- ###
 import numpy as np
 from pathlib import Path
-import time
 import torch
 import torch.nn.functional
 from transformers import AutoTokenizer, AutoModel
 
-timeStart = time.time()
-
 ### ----------------------------  Set Variables ----------------------------- ###
 # 預期這邊的東西都能變成一個使用者能夠決定的東西...
-textName = 'what-are-active-galactic-nuclei' # 不包含副檔名
-textName = 'mvp-proposal'
-LMName = 'sentence-transformers/all-MiniLM-L6-v2' 
+simiLMName = 'sentence-transformers/all-MiniLM-L6-v2' # for sentence similarity
+knowledgeSrc = [ #dataset/ 下的文ㄅ
+    'what-are-active-galactic-nuclei.txt',
+    'mvp-proposal.txt',
+]
+print('[ Knowledge Sources ]')
+for i in knowledgeSrc:
+    print(f'- {i}')
+print()
+textName = input("Pick a file to use as reference >>> ")
 
 ### -------------------------------  Load Model ------------------------------- ###
-tokenizer = AutoTokenizer.from_pretrained(LMName)
-ebModel = AutoModel.from_pretrained(LMName)
+tokenizer = AutoTokenizer.from_pretrained(simiLMName)
+ebModel = AutoModel.from_pretrained(simiLMName)
 posEmb_max = ebModel.config.max_position_embeddings
 
 ### ---------------------------------  Text --------------------------------- ###
 root = Path(__file__).resolve().parents[2]
-textPath = f'{root}/dataset/{textName}.txt'
+textPath = f'{root}/dataset/{textName}'
 textFile = open(textPath, 'r').read()
 
 ### --------------------------  def Embedder function ------------------------- ###
@@ -63,6 +68,7 @@ for c in textFile.split('\n\n'):
     clean_c = c.strip() # remove space
     if len(clean_c) >= chunkLen_max:
         cutLong(clean_c, chunkLen_max, 50)
+        print('Too long chunks detected, Need more time...')
     elif len(clean_c) > 30:
         chunks.append(clean_c)
 
@@ -75,27 +81,22 @@ for c in chunks:
 memoryBank = torch.cat(sentenceEmbs, dim=0)
 
 ### ----------------------------  cli is kind of ui... ---------------------------- ###
-#theQuery = 'what is the different between seyfert and qusar?'
-
-print(f'The article you are looking at is {textName}.txt, ')
-print(f'and the using language model is {LMName}.', end='\n\n')
+print()
+#print(f'The article you are looking at is {textName}, ')
+print(f"The language model for sentence similarity is {simiLMName}", end='\n\n')
 while True:
-    print('Enter your query here')
-    theQuery = input("(or 'quit' to exit) >>> ")
+    theQuery = input("Put your query here (or enter 'quit' to quit) >>> ")
     if theQuery=='quit':
         print('byeeee ;))')
         break
     else:
-        time.sleep(2)
         queryEmb = qingsEmbedder(theQuery, True)
         simiScores = queryEmb @ memoryBank.t()
         topScores, topIndex = torch.topk(simiScores, k=3)
-        print(f'In all {len(chunks)} chunks, these are top three most simi:') # 他媽的英文亂講
+        print(f'In all {len(chunks)} chunks, these are top three most simi:', end='/n/n') # 他媽的英文亂講
         for i in range(len(topScores[0])):
             print(f'Similarity scores: {(topScores[0][i]):.2f}')
             print(f'--> {chunks[topIndex[0][i]]}')
             print()
         print('---------------------------------------------------------------------------------', end='\n\n')
-
-timeEnd = time.time()
-print(f'It took {(timeEnd-timeStart):.2f} seconds to finish the work.')
+    input("Press 'ENTER' to start a new query.")
