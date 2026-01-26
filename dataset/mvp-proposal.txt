@@ -1,0 +1,103 @@
+Water megamasers residing in AGN accretion disks provide one of the only means of achieving percent-level constraints on the Hubble constant (H0) without relying on standard candles or distance ladders.
+
+Current maser-derived H0 constraints achieve a ~4% precision, and pushing the precision to ~1% at 22 GHz must await the ngVLA, which remains a decade or more away.
+
+(Sub)mm megamaser systems provide a nearer-term alternative that can substantially increase the number of megamaser systems and thereby improve the H0 measurement precision.
+
+Though only a handful of (sub)mm water maser transitions have been observed in AGN to date, many more are predicted to exist within ALMA's spectral footprint.
+
+In this proposal, we request ALMA time to carry out a spectral scan of the nearest and brightest megamaser-hosting AGN -- the Circinus galaxy -- to comprehensively catalog all maser emission from this source.
+
+The resulting wideband spectrum will represent the first complete spectral sweep of ALMA Bands 1-10, and in addition to identifying all strong megamaser transitions it will also provide a legacy dataset capturing a molecular inventory of the galactic environment around an AGN.
+
+Extragalactic water masers residing in AGN accretion disks currently provide one of the only known methods for achieving percent-level constraints on the Hubble constant without relying on standard candles or distance ladders.
+
+Current megamaser-derived Hubble constant constraints achieve a∼4% precision, and while next-generation radio facilities such as the ngVLA will permit this precision to be pushed down to the∼1% level, these facilities remain a decade or more away.
+
+A nearer-term alternative is available in the form of (sub)millimeter megamaser systems, which in addition to providing finer angular resolution can substantially increase the effective number of megamaser systems and thus correspondingly improve the H0 measurement precision.
+
+Though only a small handful of (sub)millimeter water maser transitions have been observed in AGN to date, many more are predicted to exist, and there is reason to believe that these predictions are incomplete and that even more transitions may support maser activity than previously thought.
+
+In this proposal, we request ALMA time to carry out a spectral scan of the nearest and brightest megamaser-hosting AGN – the Circinus galaxy – to comprehensively catalog all megamaser emission from this source.
+
+The resulting wideband spectrum will represent the first complete spectral sweep of ALMA Bands 1 through 10 for any astrophysical target, and in addition to identifying all strong megamaser transitions it will also provide a legacy dataset capturing a molecular inventory of the galactic environment around an AGN.
+
+Extragalactic megamasers residing in AGN accretion disks are remarkable tools that uniquely probe the sub-parsec geometry and kinematics of nuclear molecular gas(e.g., Herrnstein et al. 1999), provide gold-standard masses of supermassive black holes(e.g., Kuo et al. 2011), and allow us to determine one-step geometric distances to galaxies in the Hubble flow(e.g., Braatz et al. 2010, Kuo et al. 2015, Gao et al. 2016).
+
+This latter capability has enabled disk megamaser systems observed at 22 GHz to contribute to observational H0 constraints in two ways:
+
+1. The megamaser-derived distance to NGC 4258 currently achieves a measurement precision of ∼1.5%, making it a critical extragalactic anchor for calibrating distance ladder methods such as Cepheid variables (Yuan et al. 2022).
+
+2. All megamaser systems provide one-step geometric H0 measurements in the local universe.
+
+Combining the results of all megamaser-measured distances currently yields a Hubble constant constraint of 73.9 ± 3.0 km s−1 Mpc−1 (Pesce et al. 2020). This∼4% measurement is in agreement with other late-Universe techniques.
+
+Because the megamaser distance-measuring technique is independent of distance ladders and standard candles, it provides a critical test of the latter measurements for determining the late-Universe Hubble constant value.
+
+Megamaser disk systems currently provide one of the only known methods for achieving∼percent-level constraints on the Hubble constant without relying on standard candles or distance ladders.
+
+Pushing the H0 measurement precision from∼4% down to the community goal of∼1% will require either identifying new megamaser systems, improving the distance measurement precisions for existing megamaser systems, or both.
+
+The next-generation VLA (ngVLA) will yield an order-of-magnitude improvement in sensitivity over existing 22 GHz facilities, which will permit deeper observations of known 22 GHz megamaser systems and the detection of new systems that are currently too faint to observe; together, these improvements are expected to be sufficient to reach the 1% H0 measurement goal (Braatz et al. 2019).
+
+However, the ngVLA will not achieve first light for roughly another decade.
+
+A nearer-term alternative is available in the form of (sub)millimeter H2O megamasers.
+
+Though most observational work on AGN disk megamasers to date has focused on the 22 GHz line, other transitions of the water molecule also exhibit maser activity under similar physical conditions to those that produce 22 GHz emission (see, e.g., Gray et al. 2016, Bergman & Humphreys 2020).
+
+The first extragalactic detection of a (sub)millimeter H2O megamaser was achieved by Humphreys et al. (2005), who detected the 183 GHz transition towards the galaxy NGC 3079.
+
+Since then, 183 GHz megamaser emission has been detected towards NGC 4945 (Humphreys et al. 2016) and several other AGN (Pesce et al. 2023), and 321 GHz megamaser emission has been detected towards both the Circinus galaxy (Hagiwara et al. 2013) and NGC 4945 (Pesce et al. 2016, Hagiwara et al. 2016). 
+
+Pesce et al. (2023) demonstrated that, at least for the 183 GHz megamasers, the high-frequency emission appears to originate from roughly the same range of radii in the accretion disk as the 22 GHz emission.
+
+Given that (sub)millimeter megamaser emission traces similar accretion disk material (and thus similarly orderly dynamics) as its 22 GHz counterpart, we expect that (sub)millimeter megamaser disk systems should provide the same utility for measurements of host galaxy distances and H0.
+
+In principle, and even for systems that have already been measured at 22 GHz, every new (sub)millimeter transition provides a completely independent handle on its host galaxy’s distance, effectively increasing the sample size of all megamaser disk systems (and thus statistical power for global constraints on H0).
+
+Furthermore, for (sub)millimeter transitions that fall in ALMA Bands 3, 6, or 7, spectral-line VLBI capabilities are already available that would provide∼order-of-magnitude improvements in angular resolution over the corresponding 22 GHz VLBI.
+
+If comparable signal-to-noise can be achieved, then an order-of-magnitude improvement in angular resolution would enable NGC 4258-like measurements – i.e., sufficient precision in distance measurement to serve as an anchor for the cosmological distance ladder – to be made out to distances of∼70 Mpc.
+
+For (sub)millimeter transitions at higher frequencies (i.e., Bands 8-10), long-baseline ALMA configurations can access the milli-arcsecond scales otherwise require VLBI observations at 22 GHz.
+
+Radiative transfer models such as those used by Gray et al. (2016) predict that many H2O transitions should exhibit maser activity under similar physical conditions to those that give rise to 22 GHz emission; the predicted maser transitions are indicated in Figure 1 by the vertical black lines.
+
+As a comparison, H2O transitions that have been previously observed to emit as masers in an astrophysical environment are marked with vertical red lines.
+
+Of particular interest is the fact that the predictions and the observations do not always overlap.
+
+There are predicted maser lines that have never actually been observed in an astrophysical environment, and (perhaps even more interestingly) there are transitions that are not predicted by the models to support maser activity but which are nevertheless observed as masers.
+
+Furthermore, we note that the radiative transfer models developed to date have primarily simulated Milky Way environments (e.g., evolved stars) rather than the AGN accretion disk environments appropriate for megamasers.
+
+In brief, our theoretical understanding of the space of megamaser transitions is currently incomplete, perhaps substantially so.
+
+We cannot confidently predict which H2O transitions should exhibit the strongest maser activity in AGN accretion disk environments.
+
+We propose here for a complete spectral scan across ALMA Bands 1-10 in the Circinus galaxy AGN.
+
+The megamasers known to exist in the Circinus galaxy at 22 GHz, 183 GHz, and 321 GHz are the nearest and brightest of all such megamasers (e.g., Hagiwara et al. 2021, Pesce et al. 2023); if new megamasers transitions can be detected anywhere, it will most likely be in this galaxy.
+
+The known megamasers in the Circinus galaxy all have comparable isotropic luminosities; extrapolating to the highest (near-THz) frequencies proposed here, we expect any detected masers to have flux densities of several hundred mJy.
+
+We aim to achieve∼100 mJy RMS across a typical maser linewidth of ∼2 km s−1 to detect the anticipated highest-frequency masers at the >3σ level.
+
+This sensitivity can be achieved in short integrations with the 12-meter Array, no longer than 10 minutes for each spectral tuning.
+
+Because the masers are point sources to ALMA, we can observe in any array configuration and we do not require Earth rotation aperture synthesis or high-fidelity imaging.
+
+Because of ALMA’s extensive receiver suite and Chajnantor’s capacity to provide exceptionally dry (PWV <0.5 mm) observing conditions, the ALMA 12m Array is the only facility with the sensitivity and frequency coverage necessary to carry out the proposed observations (the 7m array would take ∼2 orders of magnitude longer to achieve the same sensitivity).
+
+These observations will reveal for the first time the full space of (sub)millimeter megamaser transitions, bypassing all current theoretical uncertainties and identifying the strongest emission lines.
+
+The proposed wideband spectrum will provide a legacy dataset with substantial ancillary science value beyond our primary megamaser focus.
+The additional scientific yield includes:
+
+(1) a comprehensive molecular inventory of the galactic environment around an AGN, complementary to what the ALCHEMI program (an ALMA large program) has produced for the star-forming galaxy NGC 253 (Mart´ın et al. 2021.
+
+(2) a template to inform radiative transfer models, which in their current state incompletely predict the relative strengths of different maser lines (e.g., Bergman & Humphreys
+2020).
+
+(3) an opportunity for serendipitous discoveries such as unexpectedly high-velocity emission (e.g., Nakai et al. 1993) or megamaser species other than H2O (e.g., Wang et al. 2014).
