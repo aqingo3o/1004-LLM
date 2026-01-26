@@ -17,8 +17,10 @@ from transformers import AutoTokenizer, AutoModel
 # 預期這邊的東西都能變成一個使用者能夠決定的東西...
 simiLMName = 'sentence-transformers/all-MiniLM-L6-v2' # for sentence similarity
 knowledgeSrc = [ # under dataset/
-    'what-are-active-galactic-nuclei.txt',
+    'alma-basics.txt',
+    'circinus-galaxy.txt',
     'mvp-proposal.txt',
+    'what-are-active-galactic-nuclei.txt',
 ]
 print('[ Knowledge Sources ]')
 for i in knowledgeSrc:
