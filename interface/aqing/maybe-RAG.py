@@ -8,12 +8,20 @@ import numpy as np
 from ollama import chat
 from pathlib import Path
 import torch
-import torch.nn.functional
 from transformers import AutoTokenizer, AutoModel
+
+### -------------------------------  Find GPU ------------------------------- ###
+if torch.cuda.is_available():
+    dev = torch.device('cuda')
+    print(f'Found GPU: {torch.cuda.get_device_name(0)}')
+else:
+    dev = torch.device('cpu')
+    print('No GPU found, using CPU instead.')
+print()
 
 ### ----------------------------  Set Variables ----------------------------- ###
 simiLMName = 'sentence-transformers/all-MiniLM-L6-v2' # for sentence similarity
-decoderName = 'Llama2' # decoder for 說人話
+decoderName = input("Input decoder's name (e.g., Llama2) >>> ") # decoder for 說人話
 knowledgeSrc = [ # under dataset/
     'alma-basics.txt',
     'circinus-galaxy.txt',
@@ -31,7 +39,9 @@ print(f'The decoder for the "G" of RAG is {decoderName}.')
 
 ### -------------------------------  Load Model ------------------------------- ###
 tokenizer = AutoTokenizer.from_pretrained(simiLMName)
+# tokenizer 這種不涉及張量運算的東西放 cpu 更好
 ebModel = AutoModel.from_pretrained(simiLMName)
+ebModel = ebModel.to(dev)
 posEmb_max = ebModel.config.max_position_embeddings
 
 ### ---------------------------------  Text --------------------------------- ###
@@ -43,6 +53,7 @@ textFile = open(textPath, 'r').read()
 def qingsEmbedder(theItem, need_normalize): # theStr: 要轉成embedding的東西, need_normalize(bool)
     torch.set_grad_enabled(False)
     inp = tokenizer(theItem, return_tensors="pt")
+    inp = inp.to(dev) # to gpu, if have
     out = ebModel(**inp)
     token_emb = out.last_hidden_state
     atMaskP1d = inp['attention_mask'].unsqueeze(-1).expand(token_emb.shape).float()
