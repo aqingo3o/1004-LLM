@@ -13,15 +13,15 @@ from transformers import AutoTokenizer, AutoModel
 ### -------------------------------  Find GPU ------------------------------- ###
 if torch.cuda.is_available():
     dev = torch.device('cuda')
-    print(f'Found GPU: {torch.cuda.get_device_name(0)}')
+    print(f'Found gpu: {torch.cuda.get_device_name(0)} !')
 else:
     dev = torch.device('cpu')
-    print('No GPU found, using CPU instead.')
+    print('No gpu found, using cpu instead.')
 print()
 
 ### ----------------------------  Set Variables ----------------------------- ###
 simiLMName = 'sentence-transformers/all-MiniLM-L6-v2' # for sentence similarity
-decoderName = input("Input decoder's name (e.g., Llama2) >>> ") # decoder for 說人話
+decoderName = input("Input the decoder (e.g., Llama2) >>> ") # decoder for 說人話
 knowledgeSrc = [ # under dataset/
     'alma-basics.txt',
     'circinus-galaxy.txt',
