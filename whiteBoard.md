@@ -25,3 +25,6 @@
 ├─ 你這個東西真的有夠牛逼，可惜這個人火燒屁眼，晚上才可以試試看 by RF  
 ├─ 非常之開心有人想要試試！連夜更新了相對使用者善良的版本，可以參考 [interface/](interface/aqing) 之下的兩個 scripts,  
 └─ 使用方法與相依的 python 模組更新在 tutorial 的 [Scripts that can be used Directly](tutorial/aqing/fromZero-to-coarseRAG.ipynb) 這兒, 組會又水一期 ;)) (aqing)   
+
+### 20260128
+被老豆中斷施法哈哈 (aqing)
