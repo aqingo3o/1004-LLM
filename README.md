@@ -2,8 +2,8 @@
 歡迎大家成為 **huber ;)  
 Please don't be shy to share your works, what you consider shit might be helpful to others.
 
-## ‼️ Bulletin Board
-GPU server IP 請見 1004 的白板
+> [!IMPORTANT]
+> GPU server IP 請見 1004 的白板
 
 ## Repo Structure
 以下是地圖
